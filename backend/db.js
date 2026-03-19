@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const dbUrl =
   "mongodb+srv://paytm_user:J7qfqm7U6UC8wfrp@cluster0.25cqayt.mongodb.net/";
@@ -44,4 +44,4 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-export default User;
+module.exports = { User };
