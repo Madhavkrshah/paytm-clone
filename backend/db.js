@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
-const dbUrl =
-  "mongodb+srv://paytm_user:J7qfqm7U6UC8wfrp@cluster0.25cqayt.mongodb.net/";
+const DB_URL = require("./config");
 
 async function connectDB() {
   try {
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(DB_URL);
     console.log(`MongoDB connected successfully`);
   } catch (err) {
     console.log(`MongoDB connectioin error ${err}`);
